@@ -1,0 +1,20 @@
+.inputs01{
+    height: 10%;
+    width: 60%;
+}
+.titulo {
+
+    border: none;
+    color: #fff;
+   
+    border-radius: 10px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 40px;
+    padding: 0.6em 1.5em;
+   }
+   .direta{
+    background-color:#692a12;
+    border-radius: 10%;
+   }
+   
