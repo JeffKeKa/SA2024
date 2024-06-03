@@ -1,5 +1,6 @@
 package com.sa.coffebrew.service;
 
+import com.sa.coffebrew.entity.Comanda;
 import com.sa.coffebrew.entity.Pedido;
 import com.sa.coffebrew.repository.PedidoRepository;
 import com.sa.coffebrew.repository.ProdutoRepository;
@@ -13,14 +14,35 @@ import java.util.Optional;
 public class PedidoService {
     
     @Autowired
+    private ComandaService comandaService;
+    
+    @Autowired
     private PedidoRepository pedidoRepository;
     
     @Autowired
     private ProdutoRepository produtoRepository;
     
     public Long incluirPedido(Pedido pedido, Long idProduto) {
+        
         pedido.setProduto(produtoRepository.getReferenceById(idProduto));
         return pedidoRepository.save(pedido).getIdPedido();
+        
+    }
+    public Boolean incluirNovoPedido(List<Pedido> pedido, Integer nComanda) {
+       try{ 
+           Comanda comanda = comandaService.IncluirComandaPorNumero(nComanda);
+           for(Pedido ped : pedido){
+               ped.setComanda(comanda);
+               pedidoRepository.save(ped);
+
+           }
+           return true;
+       }
+       catch(Exception ex){
+           System.out.println(ex.getLocalizedMessage());
+           return false;
+       }
+        
     }
     
     public Boolean excluirPedido(Long idPedido) {

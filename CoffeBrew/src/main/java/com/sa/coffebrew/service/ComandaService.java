@@ -14,22 +14,19 @@ import java.util.Set;
 
 @Service
 public class ComandaService {
-    
+
     @Autowired
     private ComandaRepository comandaRepository;
-    
+
     @Autowired
     private PedidoRepository pedidoRepository;
-    
-    public Long incluirComanda(Comanda comanda, Long idPedido) {
+
+    public Comanda incluirComanda(Comanda comanda) {
         
-       
-        Pedido pedido = pedidoRepository.getReferenceById(idPedido);
-        Set<Pedido> pedidos = new HashSet<>();
-        pedidos.add(pedido);
-        comanda.setPedidos(pedidos);
-        return comandaRepository.save(comanda).getIdComanda();
-        
+        Long idComanda = comandaRepository.save(comanda).getIdComanda();
+        return comandaRepository.getReferenceById(idComanda);
+
+
     }
 
     public Boolean excluirComanda(Long idComanda) {
@@ -41,15 +38,28 @@ public class ComandaService {
             return false;
         }
     }
-    
+
+    public Comanda IncluirComandaPorNumero(Integer nComanda){
+        Optional<Comanda> pesquisa = comandaRepository.findActiveComandaByNumero(nComanda);
+
+        if(pesquisa.isPresent()){
+            return pesquisa.get();
+        }else{
+           Comanda comanda = new Comanda();
+           comanda.setnComanda(nComanda);
+           comanda.setStatus("ATIVO");
+           return incluirComanda(comanda);
+        }
+    }
+
     public Optional<Comanda> consultarComanda(Long idComanda) {
         return comandaRepository.findById(idComanda);
     }
-    
+
     public List<Comanda> listarComanda() {
         return comandaRepository.findAll();
     }
-    
+
     public Boolean atualizarComanda(Comanda comanda) {
         Optional<Comanda> optionalComanda = comandaRepository.findById(comanda.getIdComanda());
         if (optionalComanda.isPresent()) {
@@ -57,7 +67,7 @@ public class ComandaService {
             c.setPrecoTotal(comanda.getPrecoTotal());
             c.setStatus(comanda.getStatus());
             c.setCliente(comanda.getCliente());
-            c.setNumero(comanda.getNumero());
+            c.setnComanda(comanda.getnComanda());
             comandaRepository.save(c);
             return true;
         } else {

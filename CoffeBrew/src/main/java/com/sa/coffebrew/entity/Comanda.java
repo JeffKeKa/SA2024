@@ -21,19 +21,19 @@ public class Comanda {
     private String status;
     
     @Column(nullable = false)
-    private Integer numero;
+    private Integer nComanda;
     
     @ManyToOne
     @JsonBackReference
-    @JoinColumn(nullable = false)
+    @JoinColumn(nullable = true)
     private Cliente cliente;
     
     @OneToMany(mappedBy = "comanda", fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.ALL)
     @JsonManagedReference
     private Set<Pedido> pedidos;
 
-    public Integer getNumero() {
-        return numero;
+    public Integer getnComanda() {
+        return nComanda;
     }
 
     public Long getIdComanda() {
@@ -76,8 +76,8 @@ public class Comanda {
         this.pedidos = pedidos;
     }
 
-    public void setNumero(Integer numero) {
-        this.numero = numero;
+    public void setnComanda(Integer nComanda) {
+        this.nComanda = nComanda;
     }
     
 }

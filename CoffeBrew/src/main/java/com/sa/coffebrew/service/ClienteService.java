@@ -41,7 +41,8 @@ public class ClienteService {
         if (optionalCliente.isPresent()) {
             Cliente c = optionalCliente.get();
             c.setCelular(cliente.getCelular());
-            c.setFone(cliente.getFone());
+            c.setNome(cliente.getNome());
+            c.setCpf(cliente.getCpf());
             c.setEmail(cliente.getEmail());
             clienteRepository.save(c);
             return true;

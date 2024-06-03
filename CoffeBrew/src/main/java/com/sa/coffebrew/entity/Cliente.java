@@ -17,7 +17,10 @@ public class Cliente {
     private Long celular;
     
     @Column(nullable = false)
-    private Long fone;
+    private String nome;
+    
+    @Column(nullable = false)
+    private String cpf;
     
     @Column(nullable = false)
     private String email;
@@ -42,14 +45,23 @@ public class Cliente {
         this.celular = celular;
     }
 
-    public Long getFone() {
-        return fone;
+    public String getNome() {
+        return nome;
     }
 
-    public void setFone(Long fone) {
-        this.fone = fone;
+    public String getCpf() {
+        return cpf;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    
     public String getEmail() {
         return email;
     }

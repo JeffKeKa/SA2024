@@ -59,4 +59,13 @@ public class PedidoController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    
+    @PutMapping("/pedido/{nComanda}")
+    public ResponseEntity<Void> adicionarPedido(@PathVariable Integer nComanda, @Valid @RequestBody List<Pedido> pedidos) {
+        if (pedidoService.incluirNovoPedido(pedidos, nComanda)) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
