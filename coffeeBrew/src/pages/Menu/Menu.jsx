@@ -6,25 +6,12 @@ import "./inicio.css";
 function Menu() {
   return (
     <div className="menuTotal">
+      <NavBar />
       <MenuLateral />
       <div className="menuDireita">
-        <NavBar />
-        <div className="cards">
-        <div className="colunas">
           <CardProduto />
-          <CardProduto />
-          <CardProduto />
-          <CardProduto />
-        </div>
-        <div className="colunas">
-          <CardProduto />
-          <CardProduto />
-          <CardProduto />
-          <CardProduto />
-        </div>
         </div>
       </div>
-    </div>
   );
 }
 

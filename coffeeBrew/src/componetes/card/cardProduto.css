@@ -1,10 +1,8 @@
-
-
 .cardProduto{
+
     width: 525px;
     height: 290px;
     margin: 3%;
-    
     display: -webkit-box;
     border-radius: 20px;
 
@@ -37,7 +35,6 @@
 .descricaoProduto{
     width: 180px;
     height: auto;
-
     display: flex;
 }
 
