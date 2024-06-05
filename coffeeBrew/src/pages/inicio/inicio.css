@@ -21,7 +21,7 @@
     /* position: relative; */
 }
 
-.esquerda{
+.barraLateralInicio{
     width: 30%;
     height: 100%;
     /*  */
@@ -36,11 +36,13 @@
     flex-direction: column;
     align-items: center;
 }
+
 .botoesInicio {
     width: 70%;
     max-width: 300pt;
-    min-width: 200pt;
+    min-width: 80pt;
     height: 4%;
+    min-height: 12pt;
     /*  */
     margin: 0;
     border-radius: 0;

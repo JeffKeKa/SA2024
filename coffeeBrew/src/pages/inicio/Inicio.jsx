@@ -18,11 +18,10 @@ function Inicio () {
 
   return (  
     <div className='container'>
-      <div className='esquerda'>
-      <Link to="/Menu" className="botoesInicio">Menu</Link> 
-      <Link to="/comanda" className="adicionarProduto">Pagamento</Link> 
-      <Link to="/comanda" className="adicionarProduto">Comanda</Link> 
-
+      <div className='barraLateralInicio'>
+        <Link to="/Menu" className="botoesInicio">Menu</Link>
+        <Link to="/comanda" className="botoesInicio">Pagamento</Link>
+        <Link to="/comanda" className="botoesInicio">Comanda</Link>
       </div>
       <div className='direita'>
 
