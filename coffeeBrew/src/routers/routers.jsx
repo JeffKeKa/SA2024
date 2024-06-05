@@ -6,6 +6,7 @@ import Menu from '../pages/Menu/Menu.jsx'
 import Login from '../componetes/CompLogin/Login'
 import SingUp from '../pages/singUp/index'
 import Comanda from '../componetes/Comanda/Comanda'
+import CadastroProduto from '../pages/CadastroProduto/CadastroProduto.jsx'
 
 const routers = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const routers = createBrowserRouter([
             {
                 path:'/comanda',
                 element:<Comanda/>
+            },
+            {
+                path:'/CadastroProduto',
+                element:<CadastroProduto/>
             },
           
             

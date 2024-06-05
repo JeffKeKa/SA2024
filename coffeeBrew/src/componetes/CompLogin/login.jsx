@@ -1,12 +1,10 @@
 import { Link, Outlet } from 'react-router-dom';
 import './login.css';
 
-
 function Login () {
 
-
   return (  
-    <div className='container'>
+    <div className='containerLogin'>
       <div className='meio'>
         <div className='m_cima'>
             <div className='c_cima'>
