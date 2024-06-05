@@ -1,16 +1,21 @@
 import React from "react";
-import CardProduto from "../../componetes/card/cardProduto";
-import NavBar from "../../componetes/Navbar";
-import MenuLateral from "../../componetes/menuLateral/menuLateral";
-import "./inicio.css";
+import CardProduto from "../../componetes/Card/CardProduto";
+import Navbar from "../../componetes/Navbar/Navbar";
+import MenuLateral from "../../componetes/MenuLateral/MenuLateral";
+import "./menu.css";
+
 function Menu() {
   return (
     <div className="menuTotal">
-      <NavBar />
+      
       <MenuLateral />
+      <section>
+        <Navbar />
       <div className="menuDireita">
-          <CardProduto />
-        </div>
+        <CardProduto />
+      </div>
+
+      </section>
       </div>
   );
 }

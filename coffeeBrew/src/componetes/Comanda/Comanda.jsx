@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "./style.css";
-import SimpleTable from "../Table";
+import "./comanda.css";
+import SimpleTable from "../Table/Table";
 function Comanda() {
   return (
     <div className="container">

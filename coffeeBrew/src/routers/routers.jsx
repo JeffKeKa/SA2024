@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 import React from 'react'
-import Inicio from '../pages/Inicio/index'
-import Menu from '../pages/Menu/Menu'
-import Login from '../componetes/CompLogin/login'
+import Inicio from '../pages/inicio/Inicio'
+import Menu from '../pages/Menu/Menu.jsx'
+import Login from '../componetes/CompLogin/Login'
 import SingUp from '../pages/singUp/index'
 import Comanda from '../componetes/Comanda/Comanda'
 
