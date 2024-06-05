@@ -1,8 +1,8 @@
-import './cardProduto.css';
+import './cardMenu.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function CardProduto() {
+export default function CardMenu() {
   const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {

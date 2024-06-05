@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./table.css";
 
 class SimpleTable extends React.Component {
   render() {

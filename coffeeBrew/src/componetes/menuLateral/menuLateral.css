@@ -1,16 +1,12 @@
 .menuLateral{
-    width: 14%;
+    width: 20%;
     height: 100%;
     padding: 0px;
     background-color:  #471909;
     display: flex-start;
     justify-content: center;
     align-items: center;
-   position: fixed;
-   
-   
-
-    /* git */
+    position: fixed;
 }
 .logo{
     height: 100%;
