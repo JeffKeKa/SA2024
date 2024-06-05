@@ -22,7 +22,7 @@ public class ProdutoController {
         if (idProduto != null && idProduto > 0) {
             return new ResponseEntity<>(idProduto, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

@@ -43,7 +43,7 @@
 //    void setUp() {
 //        cliente = new Cliente();
 //        cliente.setCelular(123456789L);
-//        cliente.setFone(987654321L);
+//        cliente.setCpf("987654321L");
 //        cliente.setEmail("teste@exemplo.com");
 //        clienteRepository.save(cliente);
 //    }
@@ -56,7 +56,7 @@
 //    void testIncluirCliente() {
 //        Cliente novoCliente = new Cliente();
 //        novoCliente.setCelular(123456780L);
-//        novoCliente.setFone(987654320L);
+//        novoCliente.setCpf("987654320L");
 //        novoCliente.setEmail("a@exemplo.com");
 //
 //        Long idCliente = clienteService.incluirCliente(novoCliente);
