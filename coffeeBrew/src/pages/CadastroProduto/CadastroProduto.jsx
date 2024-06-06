@@ -13,7 +13,7 @@ function CadastroProduto () {
            
         </div>
         <div className='m_meio'>
-            <input className='inputsCadastroProduto' placeholder='Nome' />
+            <input className='inputsCadastroProduto' placeholder='Nome' value={""} />
             <input className='inputsCadastroProduto' placeholder='Preço' />
             <input className='inputsCadastroProduto' placeholder='Descrição' />
             <input className='inputsCadastroProduto' placeholder='URL da foto' />
