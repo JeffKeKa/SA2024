@@ -11,16 +11,16 @@ export default function MenuLateral() {
         />
 
         <div className="menu">
-          <Link to="/Menu" className="adicionarProduto">
+          <Link to="/Menu" className="botoesLaterais">
             Cafes
           </Link>
-          <Link to="/Menu" className="adicionarProduto">
+          <Link to="/Menu" className="botoesLaterais">
             Salgados
           </Link>
-          <Link to="/Menu" className="adicionarProduto">
+          <Link to="/Menu" className="botoesLaterais">
             Sobremesas
           </Link>
-          <Link to="/Menu" className="adicionarProduto">
+          <Link to="/Menu" className="botoesLaterais">
             Bebidas
           </Link>
         </div>
