@@ -1,16 +1,19 @@
 .simple-table {
     width: 100%;
+    min-width: 100pt;
   
   }
   
   .simple-table th,
   .simple-table td {
-    border: 1px solid#7a3920;
+    border: 1px solid#9e593e;
     padding: 8px;
     text-align: left;
     color: white; 
+    
   }
   
   .simple-table th {
     background-color: #692a12;
+    
   }

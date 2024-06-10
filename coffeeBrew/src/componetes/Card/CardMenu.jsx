@@ -17,6 +17,29 @@ export default function CardMenu() {
 
   //   fetchData();
   // }, []);
+<<<<<<< HEAD
+
+  // return (
+  //   <div>
+  //     {produtos.map(produto => (
+  //       <div key={produto.id} className='cardProduto'>
+  //         <div className='cardProdutoImagem colorCafe'>
+  //           <img src="./imagensProduto/imagensCafe/produtoCafeAmericano.jpg" className='logo' alt={produto.nome} />
+  //         </div>
+  //         <div className='cardProdutoTexto'>
+  //           <h1 className='nomeProduto'>{produto.nome}</h1>
+  //           <h5 className='descricaoProduto'>{produto.descricao}</h5>
+  //           <div className='preço'>
+  //             <h1 className='valorProduto'>{produto.preco}</h1>
+  //             <button className='adicionarProduto'>Comprar</button>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     ))}
+  //   </div>
+  // );
+=======
+>>>>>>> daf3d8e4a209b7119000634d2732d8fb9de8b122
 
   // return (
   //   <div>
@@ -38,6 +61,8 @@ export default function CardMenu() {
   //   </div>
   // );
 
+
+  // card Produto sem backend
   return (
     <div className='cardProduto'>
     

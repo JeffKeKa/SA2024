@@ -3,20 +3,33 @@ import "./comanda.css";
 import SimpleTable from "../Table/Table";
 function Comanda() {
   return (
-    <div className="container">
-        
-      <div className="esquerda">
-      <h1 className="titulo">Comanda</h1>
-      <input className='inputs01' placeholder='Produto' />
-        <Link to="/Menu" className="adicionarProduto">
-         Adicionar produto
-        </Link>
+    
+    <div className="backGround">
+      <div  className="conteinerComanda">
+      
+
+        <div className="comandas">
+        <h1 className="titulo">Comanda</h1>
+          <Link to="/Menu" className="adicionarProduto">
+            Comanda 1
+          </Link>
+          <Link to="/Menu" className="adicionarProduto">
+            Comanda 2
+          </Link>
+          <Link to="/Menu" className="adicionarProduto">
+            Comanda 3
+          </Link>
+        </div>
+        <div className="direta">
+          <h1 className="titulo">Pedidos Comanda 1</h1>
+          <SimpleTable></SimpleTable>
+          <Link to="/Menu" className="adicionarProduto">
+           Pagar
+          </Link>
+        </div>
       </div>
-      <div className="direta">
-        <h1 className="titulo">Itens</h1>
-      <SimpleTable></SimpleTable>
       </div>
-    </div>
+   
   );
 }
 
