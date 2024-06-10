@@ -61,7 +61,8 @@ public class PedidoController {
     }
     
     @PutMapping("/pedido/{nComanda}")
-    public ResponseEntity<Void> adicionarPedido(@PathVariable Integer nComanda, @Valid @RequestBody List<Pedido> pedidos) {
+    public ResponseEntity<Void> adicionarPedido(@PathVariable Integer nComanda,
+                                                @Valid @RequestBody List<Pedido> pedidos) {
         if (pedidoService.incluirNovoPedido(pedidos, nComanda)) {
             return new ResponseEntity<>(HttpStatus.OK);
         } else {

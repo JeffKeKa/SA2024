@@ -25,7 +25,7 @@ public class Pedido {
     @JoinColumn(nullable = false)
     private Comanda comanda;
     
-    @ManyToOne
+    @OneToOne
     @JoinColumn(nullable = false)
     private Produto produto; 
 

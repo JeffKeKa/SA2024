@@ -2,6 +2,7 @@ package com.sa.coffebrew.service;
 
 import com.sa.coffebrew.entity.Comanda;
 import com.sa.coffebrew.entity.Pedido;
+import com.sa.coffebrew.entity.Produto;
 import com.sa.coffebrew.repository.PedidoRepository;
 import com.sa.coffebrew.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +30,14 @@ public class PedidoService {
         
     }
     public Boolean incluirNovoPedido(List<Pedido> pedido, Integer nComanda) {
-       try{ 
+       
+        
+        
+        try{ 
            Comanda comanda = comandaService.IncluirComandaPorNumero(nComanda);
            for(Pedido ped : pedido){
+               
+               
                ped.setComanda(comanda);
                pedidoRepository.save(ped);
 
