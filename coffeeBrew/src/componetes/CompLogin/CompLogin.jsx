@@ -1,12 +1,10 @@
 import { Link, Outlet } from 'react-router-dom';
 import './login.css';
 
-
-function Login () {
-
+function CompLogin () {
 
   return (  
-    <div className='container'>
+    <div className='containerLogin'>
       <div className='meio'>
         <div className='m_cima'>
             <div className='c_cima'>
@@ -17,16 +15,16 @@ function Login () {
             </div>
         </div>
         <div className='m_meio'>
-            <input className='inputs01' placeholder='Senha' />
-            <input className='inputs01' placeholder='Usuário' />
+            <input className='inputLogin' placeholder='Senha' />
+            <input className='inputLogin' placeholder='Usuário' />
         </div>
         <div className='m_baixo'>
             <Link className='botao01' to="/Inicio">Entrar</Link>
-            <Link to="/recuperacao" className='esqueceu'>Esqueceu sua senha?</Link>
+         
         </div>
       </div>
     </div>
   )
 }
 
-export default Login;
+export default CompLogin;

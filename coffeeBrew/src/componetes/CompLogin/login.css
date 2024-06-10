@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
 }
-.container {
+.containerLogin {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -31,7 +31,7 @@ body, html {
 .c_cima{
 
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     margin-top: 10%;
     color: #DC9B7F;
@@ -40,31 +40,33 @@ body, html {
 
 }
 .c_baixo{
-
     width: 100%;
-    height: 50%;
+    height: 30%;
+    
     display: flex;
     color: #DC9B7F;
     justify-content: center;
-
 }
 .m_meio{
 
     width: 100%;
-    height: 33%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.inputs01{
+.inputLogin{
 
-    width: 80%;
+    width: 90%;
+    max-width: 500pt;
+    min-width: 100pt;
+    height: 90%;
+
     margin: 8px;
-    height: 300%;
     border-radius: 40px;
     background-color: #EDE1D1;
-    font-size: 40px;
+    font-size-adjust: 30px;
 
     
 }

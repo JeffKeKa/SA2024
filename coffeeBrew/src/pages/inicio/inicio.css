@@ -1,14 +1,15 @@
-.container{
+.containerInicio{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    
+    justify-content: start;
     align-items: center;
     background-color: #FFE2D6;
 }
-.direita{
-    width: 40%;
-    height: 70%;
+.direitaInicio{
+    width: 90%;
+    height: 90%;
 
     margin: 10pt;
     border: 0;
@@ -23,7 +24,10 @@
 
 .barraLateralInicio{
     width: 30%;
+    max-width: 300pt;
+    min-width: 180pt;
     height: 100%;
+
     /*  */
     margin: 0;
     border-radius: 0;
