@@ -12,7 +12,7 @@ function Menu() {
       <section>
         <Navbar />
       <div className="menuDireita">
-        <CardMenu />
+        <CardProduto/>
       </div>
 
       </section>
