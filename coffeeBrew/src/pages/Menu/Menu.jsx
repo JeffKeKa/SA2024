@@ -1,7 +1,7 @@
 import React from "react";
-import CardProduto from "../../componetes/Card/CardMenu";
+import CardMenu from "../../componentes/cardMenu/CardMenu";
 import Navbar from "../../componetes/Navbar/Navbar";
-import MenuLateral from "../../componetes/menuLateral/MenuLateral";
+import MenuLateral from "../../componetes/MenuLateral/menuLateral";
 import "./menu.css";
 
 function Menu() {
@@ -13,11 +13,7 @@ function Menu() {
       <section>
         <Navbar />
       <div className="menuDireita">
-<<<<<<< HEAD
-        <CardProduto/>
-=======
-        <CardProduto />
->>>>>>> daf3d8e4a209b7119000634d2732d8fb9de8b122
+        <CardMenu/>
       </div>
 
       </section>

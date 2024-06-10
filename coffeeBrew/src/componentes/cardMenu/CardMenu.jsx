@@ -1,9 +1,11 @@
+import React from 'react'
+
 import './cardMenu.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function CardMenu() {
-  // const [produtos, setProdutos] = useState([]);
+function CardMenu() {
+      // const [produtos, setProdutos] = useState([]);
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -17,7 +19,6 @@ export default function CardMenu() {
 
   //   fetchData();
   // }, []);
-<<<<<<< HEAD
 
   // return (
   //   <div>
@@ -38,8 +39,6 @@ export default function CardMenu() {
   //     ))}
   //   </div>
   // );
-=======
->>>>>>> daf3d8e4a209b7119000634d2732d8fb9de8b122
 
   // return (
   //   <div>
@@ -66,19 +65,21 @@ export default function CardMenu() {
   return (
     <div className='cardProduto'>
     
-        <div className='cardProdutoImagem colorCafe'>
-        <img src="./imagensProduto\imagensCafe\produtoCafeAmericano.jpg"  className='logo' />
-        </div>
-
-      <div className='cardProdutoTexto'> 
-
-         <h1 className='nomeProduto'>CAFÉ AMERICANO</h1>
-         <h5 className='descricaoProduto'>O café americano é uma bebida feita diluindo-se espresso em água quente, resultando em uma xícara suave e menos concentrada do que o espresso puro.</h5>
-         <h1 className='valorProduto'>R$30,00</h1>
-         <button  className='adicionarProduto'>Comprar</button>
-
-      </div>
-
+    <div className='cardProdutoImagem colorCafe'>
+    <img src="./imagensProduto\imagensCafe\produtoCafeAmericano.jpg"  className='logo' />
     </div>
-  );
+
+  <div className='cardProdutoTexto'> 
+
+     <h1 className='nomeProduto'>CAFÉ AMERICANO</h1>
+     <h5 className='descricaoProduto'>O café americano é uma bebida feita diluindo-se espresso em água quente, resultando em uma xícara suave e menos concentrada do que o espresso puro.</h5>
+     <h1 className='valorProduto'>R$30,00</h1>
+     <button  className='adicionarProduto'>Comprar</button>
+
+  </div>
+
+</div>
+  )
 }
+
+export default CardMenu
