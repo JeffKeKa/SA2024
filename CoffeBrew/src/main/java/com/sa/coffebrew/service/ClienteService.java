@@ -65,9 +65,10 @@ import java.util.Optional;
         
         public Cliente loginCliente(String cpf, String senha){
         Cliente cli = clienteRepository.findByCpf(cpf);
+        // System.out.println("Cliente: " + cli.getCpf());
         if(cli != null){
             String senhaCod = codificarSenhaCliente(senha);
-            if(cli.getCpf().equals(senhaCod)){
+            if(cli.getSenha().equals(senhaCod)){
                 return cli;
             }            
         }

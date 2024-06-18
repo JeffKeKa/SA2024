@@ -1,6 +1,7 @@
 package com.sa.coffebrew.controller;
 
 import com.sa.coffebrew.entity.Cliente;
+import com.sa.coffebrew.entity.Login;
 import com.sa.coffebrew.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -62,9 +63,9 @@ public class ClienteController {
     
     @CrossOrigin(origins = "*")
     @PostMapping(value = "/cliente/login", consumes = {"application/json"})
-    public ResponseEntity<Object> loginCliente(@Valid @RequestBody Cliente cliente){
-        
-        Cliente cli = clienteService.loginCliente(cliente.getCpf(), cliente.getSenha());
+    public ResponseEntity<Object> loginCliente(@Valid @RequestBody Login login){
+       // System.out.println("cpf: " + login.getCpf() + " senha: " + login.getSenha());
+        Cliente cli = clienteService.loginCliente(login.getCpf(), login.getSenha());
         if(cli != null){
             return new ResponseEntity<>(cli, HttpStatus.OK);
         } else {
