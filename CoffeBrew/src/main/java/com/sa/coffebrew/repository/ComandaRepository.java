@@ -13,7 +13,7 @@ public interface ComandaRepository extends JpaRepository<Comanda, Long> {
 //    @Query(value = "SELECT * FROM comanda WHERE id_comanda = :idComanda", nativeQuery = true)
 //    Optional<Comanda> findComandaByNumero(@Param("numero") Long numero);
     
-    @Query(value = "SELECT * FROM comanda WHERE numero = :numero AND status = 'ATIVO'", nativeQuery = true)
-    Optional<Comanda> findActiveComandaByNumero(@Param("numero") Integer numero);
+    @Query(value = "SELECT * FROM comandas WHERE n_comanda = :nComanda AND status = 'ATIVO'", nativeQuery = true)
+    Optional<Comanda> findActiveComandaByNumero(@Param("nComanda") Integer nComanda);
     
 }

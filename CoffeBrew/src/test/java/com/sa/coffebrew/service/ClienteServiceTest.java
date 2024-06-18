@@ -44,6 +44,7 @@ public class ClienteServiceTest {
         cliente = new Cliente();
         cliente.setNome("aaa");
         cliente.setCelular(123456789L);
+        cliente.setSenha("123");
         cliente.setCpf("987654321L");
         cliente.setEmail("teste@exemplo.com");
         clienteRepository.save(cliente);
@@ -58,6 +59,7 @@ public class ClienteServiceTest {
     void testIncluirCliente() {
         Cliente novoCliente = new Cliente();
         novoCliente.setNome("aaa");
+        novoCliente.setSenha("123");
         novoCliente.setCelular(123456780L);
         novoCliente.setCpf("987654320L");
         novoCliente.setEmail("a@exemplo.com");
@@ -98,5 +100,21 @@ public class ClienteServiceTest {
         
         Boolean result = clienteService.excluirCliente(cliente.getIdCliente());
         assertTrue(result);
+    }
+    
+    @Test
+    @Order(6)
+    void testLoginCliente(){
+//        Cliente novoCliente = new Cliente();
+//        novoCliente.setNome("bbbb");
+//        novoCliente.setSenha("123456");
+//        novoCliente.setCelular(123456780L);
+//        novoCliente.setCpf("987654320L");
+//        novoCliente.setEmail("bbbbbb@exemplo.com");
+//        Long idCliente = clienteService.incluirCliente(novoCliente);
+//        assertNotNull(idCliente);
+        Cliente result = clienteService.loginCliente("987654320L", "123456");
+        assertNotNull(result);
+        
     }
 }

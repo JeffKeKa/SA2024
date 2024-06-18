@@ -30,17 +30,12 @@ public class PedidoService {
         
     }
     public Boolean incluirNovoPedido(List<Pedido> pedido, Integer nComanda) {
-       
-        
-        
+    
         try{ 
            Comanda comanda = comandaService.IncluirComandaPorNumero(nComanda);
            for(Pedido ped : pedido){
-               
-               
                ped.setComanda(comanda);
                pedidoRepository.save(ped);
-
            }
            return true;
        }

@@ -1,12 +1,14 @@
     package com.sa.coffebrew.service;
 
-    import com.sa.coffebrew.entity.Cliente;
-    import com.sa.coffebrew.repository.ClienteRepository;
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.stereotype.Service;
-
-    import java.util.List;
-    import java.util.Optional;
+import com.sa.coffebrew.entity.Cliente;
+import com.sa.coffebrew.repository.ClienteRepository;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
 
     @Service
     public class ClienteService {
@@ -15,7 +17,16 @@
         private ClienteRepository clienteRepository;
 
         public Long incluirCliente(Cliente cliente) {
+            String cpf = cliente.getCpf();
+            Cliente cli = clienteRepository.findByCpf(cpf);
+            
+            if(cli == null){
+            String senhaCli = cliente.getSenha();
+            cliente.setSenha(this.codificarSenhaCliente(senhaCli));
             return clienteRepository.save(cliente).getIdCliente();
+            }else{
+            return null;
+            }
         }
 
         public Boolean excluirCliente(Long idCliente) {
@@ -50,4 +61,32 @@
                 return false;
             }
         }
+        
+        
+        public Cliente loginCliente(String cpf, String senha){
+        Cliente cli = clienteRepository.findByCpf(cpf);
+        if(cli != null){
+            String senhaCod = codificarSenhaCliente(senha);
+            if(cli.getCpf().equals(senhaCod)){
+                return cli;
+            }            
+        }
+        return null;
+    }
+        
+    public String codificarSenhaCliente(String senha){
+        String senhaCod = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-512");
+            byte[] bytes = md.digest(senha.getBytes(StandardCharsets.UTF_8));
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < bytes.length; i++) {
+                sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+            senhaCod = sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.getLocalizedMessage();
+        }
+        return senhaCod;
+    }
     }

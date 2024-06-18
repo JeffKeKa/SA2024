@@ -59,4 +59,16 @@ public class ClienteController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    
+    @CrossOrigin(origins = "*")
+    @PostMapping(value = "/cliente/login", consumes = {"application/json"})
+    public ResponseEntity<Object> loginCliente(@Valid @RequestBody Cliente cliente){
+        
+        Cliente cli = clienteService.loginCliente(cliente.getCpf(), cliente.getSenha());
+        if(cli != null){
+            return new ResponseEntity<>(cli, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);            
+        }
+    }
 }

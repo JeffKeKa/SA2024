@@ -23,6 +23,9 @@ public class Cliente {
     private String cpf;
     
     @Column(nullable = false)
+    private String senha;
+    
+    @Column(nullable = false)
     private String email;
     
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.ALL)
@@ -77,4 +80,14 @@ public class Cliente {
     public void setComandas(Set<Comanda> comandas) {
         this.comandas = comandas;
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
+    
 }
