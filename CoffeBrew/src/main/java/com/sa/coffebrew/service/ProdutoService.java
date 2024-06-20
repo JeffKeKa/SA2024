@@ -31,6 +31,10 @@ public class ProdutoService {
     public Optional<Produto> consultarProduto(Long idProduto) {
         return produtoRepository.findById(idProduto);
     }
+    
+    public List<Produto> consultarProdutoPorTipo(String tipo){
+        return produtoRepository.findByTipo(tipo);
+    }
 
     public List<Produto> listarProdutos() {
         return produtoRepository.findAll();

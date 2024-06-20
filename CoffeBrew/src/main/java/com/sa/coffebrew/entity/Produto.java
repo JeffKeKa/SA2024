@@ -19,6 +19,9 @@ public class Produto {
     @Column(nullable = false)
     private String descricao;
     
+    @Column(nullable = false)
+    private String tipo;
+    
     @Column(nullable = true)
     private String imgURL;
 
@@ -61,5 +64,15 @@ public class Produto {
     public void setImgURL(String imgURL) {
         this.imgURL = imgURL;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    
     
 }

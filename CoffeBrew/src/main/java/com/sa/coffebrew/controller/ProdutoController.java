@@ -59,4 +59,16 @@ public class ProdutoController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    
+    @GetMapping("/produto/tipo/{tipo}")
+    public ResponseEntity<Object> produtosPorTipo(@PathVariable String tipo){
+    
+        List<Produto> produtos = produtoService.consultarProdutoPorTipo(tipo);
+        
+        if (produtos != null) {
+            return new ResponseEntity<>(produtos, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
